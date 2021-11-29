@@ -10,10 +10,8 @@ int main()
   int num1,num2;
   std::string op;
 
-  std:: cout << "Input an operation and then two operands\n";
-  std:: cin >> op;
-  std:: cin >> num1;
-  std:: cin >> num2;
+  std:: cout << "Input an operation and then two operands\n\t\tSEPARATE THEM BY SPACES!\n";
+  std:: cin >> op >> num1 >> num2;
 
   if(op == "*")
   {

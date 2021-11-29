@@ -6,6 +6,37 @@
  *  Copyright 2021 Derek Santana
 */
 
+void check(double xp, double xm, double a, double b, double c)
+{
+  std:: cout<< "\n\nWe can double check if the roots are correct by plugging them into\n";
+  std:: cout<< "ax^2+bx+c. if the equation equals 0, then it is a real root!\n\n";
+
+  double xpluseqn = (a*(xp*xp))+(b*xp)+c;
+  double xminuseqn = (a*(xm*xm))+(b*xm)+c;
+
+  if(xpluseqn == 0)
+  {
+    std:: cout<< "for x1 = " << xp <<" : " << a <<"(" << xp << "*"<<xp<<")";
+    std:: cout<<"+"<<b<<"("<<xp<<")"<<"+"<<c<<" = "<< xpluseqn << "\n";
+    std::cout<<xp<<" IS A REAL ROOT!\n";
+  }
+  else
+  {
+    std:: cout<<"equation does not = 0. not real roots.";
+  }
+
+  if(xminuseqn == 0)
+  {
+    std:: cout<< "for x2 = " << xm <<" : " << a <<"(" << xm << "*"<<xm<<")";
+    std:: cout<<"+"<<b<<"("<<xm<<")"<<"+"<<c<<" = "<< xminuseqn << "\n";
+    std::cout<<xp<<" IS A REAL ROOT!\n";
+  }
+  else
+  {
+    std:: cout<<"equation does not = 0. not real roots.";
+  }
+}
+
 void roots(double a, double b, double c)
 {
   double n1 = (b*b)-4*(a*c);
@@ -19,8 +50,10 @@ void roots(double a, double b, double c)
   double xplus = ((b*-1) + squareroot)/(2*a);
   double xminus = ((b*-1) - squareroot)/(2*a);
 
-  std:: cout<<"The real roots of the quadratic equation are:\n";
+  std:: cout<<"\nThe real roots of the quadratic equation are:\n";
   std:: cout<<"x1 = " <<xplus<<"\nx2 = "<< xminus;
+
+  check(xplus,xminus,a,b,c);
 }
 
 int main() 

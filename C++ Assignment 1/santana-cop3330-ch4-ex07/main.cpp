@@ -12,11 +12,9 @@ int main()
   std:: string n1, n2;
   char op;
 
-  std:: cout << "--- MINI CALCULATOR FOR ONLY SINGLE DIGIT NUMBERS ---\nenter number then operand then number\n";
+  std:: cout << "\t--- MINI CALCULATOR FOR ONLY SINGLE DIGIT NUMBERS ---\n--- enter number then operand then number separated by spaces ---\n";
 
-  std:: cin >> n1;
-  std:: cin >> op;
-  std:: cin >> n2;
+  std:: cin >> n1 >> op >> n2;
 
   // n1 -> input number or if spelled out
 

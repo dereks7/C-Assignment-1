@@ -18,6 +18,7 @@ int main()
   int count=-1;
 
   std:: cout<< "Enter a name and value (Terminate Input with \"NoName 0\")\n";
+  std:: cout<< "separate by spaces\n";
 
   for(int i =  0; i < 100; i++)
   {
